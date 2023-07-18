@@ -1,0 +1,12 @@
+scrapy url (link do site sem os parenteces) <-- aqui nos falamos para o scrapy qual site nos desejamos coletar os dados
+
+response.url <-- conseguimos ver qual url a gente colocou do site
+
+response.xpath("*//div/h2[@class'teste']/text()").getall() <-- aqui estou dizendo que eu quero que o scrapy pegue todas as DIV que tem o H2 com a seguinte (class = teste) que saia em formato de testo (/text()) e que mostre todos esses elementos em formato de lista (.getall) se for somente o (.get) vai aparecer só o primeiro elemento da LISTA.
+
+response.css('h2.x-text-content-text-primary::text').getall() faz a mesma coisa que o response.xpath
+
+Se colocarmos o len no começo podemos ver quantos elementos ele achou, exemplo:
+len(response.xpath("*//div/h2[@class'teste']/text()").getall()). 
+
+
